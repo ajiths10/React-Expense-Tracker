@@ -30,35 +30,43 @@ function App() {
       date: new Date(2021, 5, 12),
       location: "High Town",
     },
+    {
+      id: "e5",
+      title: "Food",
+      amount: 2,
+      date: new Date(2021, 6, 13),
+      location: "High Town",
+    },
+    {
+      id: "e4",
+      title: "Gas",
+      amount: 46,
+      date: new Date(2021, 1, 1),
+      location: "High Town",
+    },
+    {
+      id: "e4",
+      title: "Movie",
+      amount: 3,
+      date: new Date(2021, 7, 22),
+      location: "High Town",
+    },
+    
   ];
-  
+  let a = expenses.map(function (expenses) {
+    return (
+      <ExpenseItem
+        title={expenses.title}
+        amount={expenses.amount}
+        date={expenses.date}
+        location={expenses.location}
+      ></ExpenseItem>
+    );
+  });
   return (
     <div>
       <h2>Let's get started!</h2>
-      <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-        location={expenses[0].location}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-        location={expenses[1].location}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-        location={expenses[2].location}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date}
-        location={expenses[3].location}
-      ></ExpenseItem>
+      {a}
     </div>
   );
 }
