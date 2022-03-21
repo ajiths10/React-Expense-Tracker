@@ -1,5 +1,5 @@
 import ExpenseItem from "./components/ExpenseItem";
-
+import Expenses from "./components/Expenses";
 function App() {
   const expenses = [
     {
@@ -44,11 +44,15 @@ function App() {
       date: new Date(2021, 7, 22),
     },
   ];
+
+  
   let a = expenses.map(function (expenses) {
     return (
-      <ExpenseItem amount={expenses.amount} date={expenses.date}></ExpenseItem>
+      <Expenses amount={expenses.amount} date={expenses.date} />
     );
   });
+
+  
   return (
     <div>
       <h2>Let's get started!</h2>

@@ -1,4 +1,5 @@
 import "./ExpenseItem.css";
+import Card from "./Card";
 
 function ExpenseDetails(props) {
   let amount = props.amount.money;
@@ -6,9 +7,9 @@ function ExpenseDetails(props) {
   let location = props.amount.location;
 
   return (
-    <div>
-      <div> Location: {location} </div>
+    <div >
       <div className="expense-item__description">
+        <div> Location: {location} </div>
         <h2>{title} </h2>
         <div className="expense-item__price"> ${amount}</div>
       </div>
