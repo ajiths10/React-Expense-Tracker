@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
 import Card from "../UI/Card";
@@ -6,18 +7,19 @@ import App from "../../App"
 
 const ExpenseItem=(props)=> {
   
-  const clickHandeler = ()=>{
-    props="";
-    console.log(props)
-    console.log('Delete sucessFull');
+  const [title, setTitle] = useState(props.amount.title);
+  
+  const clickHandler = ()=>{
+    setTitle('Updated!');
+    console.log(title);
   };
 
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
-      <ExpenseDetails amount={props.amount} />
-      <button onClick={clickHandeler}>Delete</button>
+      <ExpenseDetails amount={props.amount} title={title}/>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
     
   );
