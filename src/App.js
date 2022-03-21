@@ -4,62 +4,49 @@ function App() {
   const expenses = [
     {
       id: "e1",
-      title: "Toilet Paper",
-      amount: 94.12,
+
+      amount: { money: 94.12, title: "Toilet Paper", location: "High Town" },
       date: new Date(2020, 7, 14),
-      location: "High Town",
     },
     {
       id: "e2",
-      title: "New TV",
-      amount: 799.49,
+
+      amount: { money: 799.49, title: "New TV", location: "High Town" },
       date: new Date(2021, 2, 12),
-      location: "High Town",
     },
     {
       id: "e3",
-      title: "Car Insurance",
-      amount: 294.67,
+
+      amount: { money: 294.67, title: "Car Insurance", location: "High Town" },
       date: new Date(2021, 2, 28),
-      location: "High Town",
     },
     {
       id: "e4",
-      title: "New Desk (Wooden)",
-      amount: 450,
+
+      amount: { money: 450, title: "New Desk (Wooden)", location: "High Town" },
       date: new Date(2021, 5, 12),
-      location: "High Town",
     },
     {
       id: "e5",
-      title: "Food",
-      amount: 2,
+
+      amount: { money: 2, title: "Food", location: "High Town" },
       date: new Date(2021, 6, 13),
-      location: "High Town",
     },
     {
-      id: "e4",
-      title: "Gas",
-      amount: 46,
+      id: "e6",
+
+      amount: { money: 46, title: "Gas", location: "High Town" },
       date: new Date(2021, 1, 1),
-      location: "High Town",
     },
     {
-      id: "e4",
-      title: "Movie",
-      amount: 3,
+      id: "e7",
+      amount: { money: 3, title: "Movie", location: "High Town" },
       date: new Date(2021, 7, 22),
-      location: "High Town",
     },
   ];
   let a = expenses.map(function (expenses) {
     return (
-      <ExpenseItem
-        title={expenses.title}
-        amount={expenses.amount}
-        date={expenses.date}
-        location={expenses.location}
-      ></ExpenseItem>
+      <ExpenseItem amount={expenses.amount} date={expenses.date}></ExpenseItem>
     );
   });
   return (
