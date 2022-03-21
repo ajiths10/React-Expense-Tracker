@@ -51,7 +51,6 @@ function App() {
       date: new Date(2021, 7, 22),
       location: "High Town",
     },
-    
   ];
   let a = expenses.map(function (expenses) {
     return (
