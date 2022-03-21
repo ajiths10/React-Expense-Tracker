@@ -1,65 +1,41 @@
-import Expenses from "./components/Expenses/Expenses";
-import './components/UI/Card.css';
+import React from 'react';
 
+import Expenses from './components/Expenses/Expenses';
 
-const App=()=> {
+const App = () => {
   const expenses = [
     {
-      id: "e1",
-
-      amount: { money: 94.12, title: "Toilet Paper", location: "High Town" },
+      id: 'e1',
+      title: 'Toilet Paper',
+      amount: 94.12,
       date: new Date(2020, 7, 14),
     },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
     {
-      id: "e2",
-
-      amount: { money: 799.49, title: "New TV", location: "High Town" },
-      date: new Date(2021, 2, 12),
-    },
-    {
-      id: "e3",
-
-      amount: { money: 294.67, title: "Car Insurance", location: "High Town" },
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
       date: new Date(2021, 2, 28),
     },
     {
-      id: "e4",
-
-      amount: { money: 450, title: "New Desk (Wooden)", location: "High Town" },
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
       date: new Date(2021, 5, 12),
-    },
-    {
-      id: "e5",
-
-      amount: { money: 2, title: "Food", location: "High Town" },
-      date: new Date(2021, 6, 13),
-    },
-    {
-      id: "e6",
-
-      amount: { money: 46, title: "Gas", location: "High Town" },
-      date: new Date(2021, 1, 1),
-    },
-    {
-      id: "e7",
-      amount: { money: 3, title: "Movie", location: "High Town" },
-      date: new Date(2021, 7, 22),
     },
   ];
 
-  
-
-  let a = expenses.map(function (expenses) {
-    return (
-      <Expenses amount={expenses.amount} date={expenses.date} />
-    );
-  });
-
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
 
   return (
     <div>
       <h2>Let's get started!</h2>
-      {a}
+      <Expenses items={expenses} />
     </div>
   );
 }
