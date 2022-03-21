@@ -1,7 +1,6 @@
-import "./ExpenseItem.css";
-import Card from "./Card";
 
-function ExpenseDetails(props) {
+import './ExpenseItem.css';
+const ExpenseDetails=(props)=> {
   let amount = props.amount.money;
   let title = props.amount.title;
   let location = props.amount.location;
