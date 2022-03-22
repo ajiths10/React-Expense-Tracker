@@ -1,6 +1,7 @@
 import Expenses from "./components/Expenses/Expenses";
 import './components/UI/Card.css';
-import ExpenseForm from "./components/Expenses/ExpenseForm";
+import NewExpense from './components/NewExpense/NewExpense';
+
 
 const App=()=> {
   const expenses = [
@@ -58,8 +59,7 @@ const App=()=> {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <ExpenseForm></ExpenseForm>
+      <NewExpense/>
       {a}
     </div>
   );
