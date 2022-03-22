@@ -7,19 +7,19 @@ import App from "../../App"
 
 const ExpenseItem=(props)=> {
   
-  const [title, setTitle] = useState(props.amount.title);
+  const [money, setTitle] = useState(props.amount.money);
   
   const clickHandler = ()=>{
-    setTitle('Updated!');
-    console.log(title);
+    setTitle('100$');
+    console.log(`${money} Updated!`);
   };
 
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
-      <ExpenseDetails amount={props.amount} title={title}/>
-      <button onClick={clickHandler}>Change Title</button>
+      <ExpenseDetails amount={props.amount} money={money}/>
+      <button onClick={clickHandler}>Change Amount</button>
     </Card>
     
   );

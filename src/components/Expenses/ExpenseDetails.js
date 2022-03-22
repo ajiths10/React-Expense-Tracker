@@ -1,8 +1,8 @@
 
 import './ExpenseItem.css';
 const ExpenseDetails=(props)=> {
-  let amount = props.amount.money;
-  let title = props.title;
+  let amount = props.money;
+  let title = props.amount.title;
   let location = props.amount.location;
 
   return (
