@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
-
-
 
 const App = () => {
   const expenses = [
@@ -27,6 +26,15 @@ const App = () => {
     },
   ];
 
+  const [newexpenses,setExpnese]=useState('');
+  const AddExpenseHandler = (expense) => { 
+    setExpnese(expense);
+    console.log('In App.js');
+    console.log(expense);
+    return <div> <Expenses item={newexpenses}/>  </div>
+  };
+  console.log(newexpenses);
+  console.log(expenses);
   // return React.createElement(
   //   'div',
   //   {},
@@ -36,8 +44,9 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={AddExpenseHandler} />
       <Expenses items={expenses} />
+      
     </div>
   );
 }
