@@ -1,8 +1,7 @@
 import Expenses from "./components/Expenses/Expenses";
-import './components/UI/Card.css';
-import NewExpense from './components/NewExpense/NewExpense';
+import "./components/UI/Card.css";
+import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
-
 
 const DUMMY_EXPENSES = [
   {
@@ -26,9 +25,7 @@ const DUMMY_EXPENSES = [
   },
 ];
 
-  
-
-const App = () => { 
+const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
@@ -38,11 +35,11 @@ const App = () => {
   };
 
   return (
-     <div>
+    <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
