@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 
-
 const App = () => {
   const expenses = [
     {
@@ -26,16 +25,13 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-
-  const [newexpenses,setExpnese]=useState('');
-  const AddExpenseHandler = (expense) => { 
-    setExpnese(expense);
+const [passExpense,addNewExpense] = useState('')
+  const addExpenseHandler = expense => {
     console.log('In App.js');
     console.log(expense);
-    return 
+    addNewExpense(expense);
   };
-  console.log(newexpenses);
-  console.log(expenses);
+
   // return React.createElement(
   //   'div',
   //   {},
@@ -45,9 +41,8 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense onAddExpense={AddExpenseHandler} />
-      <Expenses items={expenses} />
-      
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses}  />
     </div>
   );
 }
