@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 
+
 const App = () => {
   const expenses = [
     {
@@ -31,7 +32,7 @@ const App = () => {
     setExpnese(expense);
     console.log('In App.js');
     console.log(expense);
-    return <div> <Expenses item={newexpenses}/>  </div>
+    return 
   };
   console.log(newexpenses);
   console.log(expenses);
